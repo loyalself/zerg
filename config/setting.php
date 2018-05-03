@@ -7,5 +7,6 @@
  */
 //图片前缀配置信息,这个配置文件是自定义的
 return [
-    'img_prefix' => 'http://zerg.cc/images'
+    'img_prefix' => 'http://zerg.cc/images',
+    'token_expire_in'=> 7200
 ];

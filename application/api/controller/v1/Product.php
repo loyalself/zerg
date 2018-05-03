@@ -40,4 +40,20 @@ class Product
         $products = $products->hidden(['summary']);
         return $products;
     }
+
+    public function getOne($id)
+    {
+        (new IDMustBePostiveint())->goCheck();
+        $product = ProductModel::getProductDetail($id);
+        if(!$product)
+        {
+            throw new ProductException();
+        }
+        return $product;
+    }
+
+    public function deleteOne($id)
+    {
+
+    }
 }
